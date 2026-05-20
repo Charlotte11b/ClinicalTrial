@@ -1,0 +1,17 @@
+clinical-trial-virtual-participant-simulator-trial-specific/
+**/materials/
+**/sessions/
+**/.venv/
+**/venv/
+**/env/
+**/__pycache__/
+**/*.pyc
+**/.env
+**/config.json
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.webm
+

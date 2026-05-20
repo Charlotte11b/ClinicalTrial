@@ -1,0 +1,16 @@
+materials/
+sessions/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.webm
+.env
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+config.json
+
