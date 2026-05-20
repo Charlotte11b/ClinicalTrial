@@ -1,4 +1,5 @@
 {
+  "app_title": "Clinical Trial Virtual Participant Simulator",
   "ollama_model": "llama3.2:3b",
   "ollama_url": "http://localhost:11434/api/chat",
   "materials_dir": "materials",

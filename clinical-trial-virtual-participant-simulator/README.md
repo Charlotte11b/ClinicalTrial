@@ -119,10 +119,17 @@ Copy-Item config.example.json config.json
 Open `config.json` in a text editor and change the passwords:
 
 ```json
+"app_title": "Clinical Trial Virtual Participant Simulator",
 "auth_users": [
   ["charlotte", "your-local-password"],
   ["volunteer1", "another-local-password"]
 ]
+```
+
+For a trial-specific local copy, set `app_title` to the trial name, for example:
+
+```json
+"app_title": "TRACE Clinical Trial Virtual Participant Simulator"
 ```
 
 ### 5. Run the App

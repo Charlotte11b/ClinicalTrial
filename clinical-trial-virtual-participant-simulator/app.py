@@ -8,7 +8,7 @@ import gradio as gr
 import requests
 
 
-APP_TITLE = "Clinical Trial Virtual Participant Simulator"
+DEFAULT_APP_TITLE = "Clinical Trial Virtual Participant Simulator"
 DISCLAIMER = (
     "Training prototype only. Do not enter patient identifiers or real clinical information. "
     "Not for real recruitment, medical advice, safety triage, or clinical decision-making."
@@ -442,6 +442,7 @@ def load_config():
     source = CONFIG_PATH if CONFIG_PATH.exists() else CONFIG_EXAMPLE_PATH
     with source.open("r", encoding="utf-8") as f:
         config = json.load(f)
+    config.setdefault("app_title", DEFAULT_APP_TITLE)
     config.setdefault("ollama_model", "llama3.2:3b")
     config.setdefault("ollama_url", "http://localhost:11434/api/chat")
     config.setdefault("materials_dir", "materials")
@@ -463,6 +464,7 @@ def load_config():
 
 
 CONFIG = load_config()
+APP_TITLE = str(CONFIG.get("app_title", DEFAULT_APP_TITLE))
 LOCAL_ONLY = bool(CONFIG.get("local_only", True))
 SERVER_PORT = int(CONFIG.get("server_port", 7860))
 
